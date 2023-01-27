@@ -3,13 +3,15 @@ package pages;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class StartPage extends BasePage {
-      @AndroidFindBy(xpath = "//android.view.View[@content-desc='Абай']")
-        public MobileElement sityAbbaybutton;
+      @FindBy(xpath = "//android.view.View[@content-desc='Абай']")
+        public WebElement sityAbbaybutton;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Отмена']")
-    public MobileElement updateAppData;
+    @FindBy(xpath = "//android.widget.Button[@content-desc='Отмена']")
+    public WebElement updateAppData;
 
 
     public StartPage(AppiumDriver<?> driver) {

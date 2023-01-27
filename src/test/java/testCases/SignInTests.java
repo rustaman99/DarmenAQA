@@ -1,23 +1,19 @@
 package testCases;
 
-import org.junit.Test;
-import pages.*;
+
+import org.testng.annotations.Test;
 
 public class SignInTests extends BaseTest{
- HomePage homePage=new HomePage(driver);
- LogInPage logInPage = new LogInPage(driver);
- LoginSelectionPage loginSelectionPage = new LoginSelectionPage(driver);
- ProfilePage profilePage=new ProfilePage(driver);
- StartPage startPage=new StartPage(driver);
-
-
 
     @Test
-    public void testUserLogin(){
-        startPage.sityAbbaybutton.click();
-        startPage.updateAppData.click();
+    public void testUserLogin() throws InterruptedException {
+//        Thread.sleep(10000);
+//        startPage.sityAbbaybutton.click();
+//        Thread.sleep(5000);
+//        startPage.updateAppData.click();
+        Thread.sleep(5000);
         homePage.profile.click();
-        profilePage.loginSelectionPage.click();
+        profilePage.loginElement.click();
         loginSelectionPage.loginPage.click();
         logInPage.email.sendKeys("nazarenko.ruslan@ukr.net");
         logInPage.password.sendKeys("rustaman99");

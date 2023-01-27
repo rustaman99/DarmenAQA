@@ -20,12 +20,16 @@ public class DriverConfig {
             capabilities.setCapability("platformName", "android");
             capabilities.setCapability("appium:deviceName", "emulator-5554");
             capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.sannacode.android.serbiso");
-            capabilities.setCapability("appium:app", "C:/Users/Ксю/Desktop/base (1).apk");
+            capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.example.darmen.MainActivity");
+//            capabilities.setCapability("appium:app", "/Users/Stanislav_Nazarenko/downloads/base (1).apk");
             capabilities.setCapability(MobileCapabilityType.NO_RESET,true);
             capabilities.setCapability(MobileCapabilityType.FULL_RESET,false);
+            capabilities.setCapability("appium:ensureWebviewsHavePages", true);
+            capabilities.setCapability("appium:nativeWebScreenshot", true);
+            capabilities.setCapability("appium:newCommandTimeout", 3600);
+            capabilities.setCapability("appium:connectHardwareKeyboard", true);
 
-
-            driver = new AndroidDriver<MobileElement>(new URL("http://localhost:4723/wd/hub"), capabilities);
+            driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
         } catch (MalformedURLException e) {
            log.error("Failed to initialize the tests for the Android device");
         }

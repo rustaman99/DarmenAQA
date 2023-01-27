@@ -3,20 +3,22 @@ package pages;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LogInPage extends  BasePage {
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Войти']")
-    public MobileElement login;
+    @FindBy(xpath = "//android.widget.Button[@content-desc='Войти']")
+    public WebElement login;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Email']")
-    public  MobileElement email;
+    @FindBy(xpath = "//android.widget.EditText[@text='Email']")
+    public  WebElement email;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Password']")
-    public  MobileElement password;
+    @FindBy(xpath = "//android.widget.EditText[@text='Password']")
+    public  WebElement password;
 
-    @AndroidFindBy(xpath = " //android.view.View[@content-desc='Unable to log in']")
-    public  MobileElement errorMessage;
+    @FindBy(xpath = " //android.view.View[@content-desc='Unable to log in']")
+    public  WebElement errorMessage;
 
 
     public LogInPage(AppiumDriver<?> driver) {

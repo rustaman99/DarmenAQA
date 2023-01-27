@@ -18,7 +18,7 @@ public class BasePage {
 
     public BasePage(AppiumDriver<?> driver){
         this.driver=driver;
-        PageFactory.initElements(new AppiumFieldDecorator(driver),this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
     private void fluentWait(MobileElement element,long timeout){
         Wait wait =new AppiumFluentWait(driver)
