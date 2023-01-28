@@ -21,7 +21,8 @@ public class DriverConfig {
             capabilities.setCapability("appium:deviceName", "emulator-5554");
             capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.sannacode.android.serbiso");
             capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.example.darmen.MainActivity");
-//            capabilities.setCapability("appium:app", "/Users/Stanislav_Nazarenko/downloads/base (1).apk");
+//            capabilities.setCapability("appium:app", "/Users/Stanislav_Nazarenko/downloads/
+            capabilities.setCapability("appium:app", "C:\\Users\\Ксю\\Desktop\\base (1).apk");
             capabilities.setCapability(MobileCapabilityType.NO_RESET,true);
             capabilities.setCapability(MobileCapabilityType.FULL_RESET,false);
             capabilities.setCapability("appium:ensureWebviewsHavePages", true);

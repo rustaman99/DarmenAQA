@@ -10,6 +10,10 @@ public class StartPage extends BasePage {
       @FindBy(xpath = "//android.view.View[@content-desc='Абай']")
         public WebElement sityAbbaybutton;
 
+
+    @FindBy(xpath = "//android.view.View[@content-desc='Пропустить всё']")
+    public WebElement skipAll;
+
     @FindBy(xpath = "//android.widget.Button[@content-desc='Отмена']")
     public WebElement updateAppData;
 
